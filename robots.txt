@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://squadlink.in/sitemap.xml
