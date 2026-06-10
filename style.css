@@ -41,11 +41,10 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
-  cursor: none;
 }
 
-a { text-decoration: none; color: inherit; cursor: none; }
-button { cursor: none; font-family: inherit; border: none; background: none; }
+a { text-decoration: none; color: inherit; cursor: pointer; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
 img { display: block; max-width: 100%; }
 
 /* ================================================================
@@ -64,6 +63,7 @@ img { display: block; max-width: 100%; }
    CUSTOM CURSOR
    ================================================================ */
 .cursor {
+  display: none;
   position: fixed;
   width: 24px; height: 32px;
   pointer-events: none;
@@ -87,6 +87,7 @@ img { display: block; max-width: 100%; }
 }
 
 .cursor-follower {
+  display: none;
   position: fixed;
   width: 40px; height: 40px;
   border-radius: 50%;
@@ -177,7 +178,7 @@ img { display: block; max-width: 100%; }
   position: relative;
   overflow: hidden;
   transition: transform .25s var(--ease), box-shadow .25s var(--ease);
-  cursor: none;
+  cursor: pointer;
   letter-spacing: .5px;
 }
 
@@ -422,7 +423,7 @@ img { display: block; max-width: 100%; }
   color: var(--cyan);
   display: flex; align-items: center; justify-content: center;
   transition: all .3s ease;
-  cursor: none;
+  cursor: pointer;
   box-shadow: 0 0 15px rgba(0,255,255,0.15);
 }
 .carousel-btn svg { width: 24px; height: 24px; }
@@ -444,7 +445,7 @@ img { display: block; max-width: 100%; }
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow .4s ease, border-color .4s ease;
-  cursor: none;
+  cursor: pointer;
 }
 .video-card:hover {
   transform: translateY(-12px) scale(1.05);
@@ -480,7 +481,7 @@ img { display: block; max-width: 100%; }
   justify-content: center;
   background: linear-gradient(to bottom, rgba(6,10,20,0.2), rgba(6,10,20,0.6));
   transition: all .3s ease;
-  cursor: none;
+  cursor: pointer;
 }
 .video-card:hover .play-overlay { background: rgba(0,255,255,0.1); }
 .play-btn-circle {
@@ -565,7 +566,7 @@ img { display: block; max-width: 100%; }
   border: 1px solid var(--border);
   color: var(--text);
   display: flex; align-items: center; justify-content: center;
-  cursor: none;
+  cursor: pointer;
   transition: all .2s ease;
 }
 .modal-close svg { width: 18px; height: 18px; }
@@ -710,7 +711,7 @@ img { display: block; max-width: 100%; }
   background: var(--surface);
   transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
   min-width: 300px;
-  cursor: none;
+  cursor: pointer;
 }
 
 .social-card-glow {
@@ -891,4 +892,25 @@ img { display: block; max-width: 100%; }
   .video-card { flex: 0 0 260px; }
   .ig-card    { flex: 0 0 160px; }
   .ideas-grid { grid-template-columns: 1fr; }
+}
+
+/* ================================================================
+   CUSTOM CURSOR DESKTOP SHOW / HIDE CONTROLLER
+   ================================================================ */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .cursor,
+  .cursor-follower {
+    display: block;
+  }
+  body,
+  a,
+  button,
+  .btn,
+  .carousel-btn,
+  .video-card,
+  .play-overlay,
+  .social-card,
+  .modal-close {
+    cursor: none;
+  }
 }

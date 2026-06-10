@@ -30,11 +30,19 @@
   animateFollower();
 
   // Hover state detection
-  const interactiveEls = 'a, button, .video-card, .play-overlay, .social-card, .carousel-btn, [role="button"]';
+  const interactiveEls = 'a, button, .video-card, .play-overlay, .social-card, .carousel-btn, [role="button"], label';
+  const textInputEls = 'input[type="text"], input[type="email"], input[type="number"], input[type="password"], textarea';
   
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveEls)) {
       cursor.classList.add('h-hover');
+    }
+    if (e.target.closest(textInputEls)) {
+      cursor.style.opacity = '0';
+      follower.style.opacity = '0';
+    } else {
+      cursor.style.opacity = '1';
+      follower.style.opacity = '1';
     }
   });
   

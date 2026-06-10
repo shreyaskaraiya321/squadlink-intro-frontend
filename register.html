@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Register - Join The Arena | Squadlink</title>
+  <meta name="title" content="Register - Join The Arena | Squadlink">
+  <meta name="description" content="Register for Squadlink to secure your spot in the arena. Join the ultimate esports platform to find your squad and compete globally.">
+  <meta name="keywords" content="Squadlink registration, join esports platform, sign up gaming community, BGMI registration, Valorant teams">
+  <meta name="author" content="Squadlink">
+  <meta name="theme-color" content="#060A14">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://squadlink.in/register.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://squadlink.in/register.html">
+  <meta property="og:title" content="Register - Join The Arena | Squadlink">
+  <meta property="og:description" content="Register for Squadlink to secure your spot in the arena. Join the ultimate esports platform to find your squad and compete globally.">
+  <meta property="og:image" content="https://squadlink.in/squadlink_logo.png">
+  <meta property="og:site_name" content="Squadlink">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://squadlink.in/register.html">
+  <meta property="twitter:title" content="Register - Join The Arena | Squadlink">
+  <meta property="twitter:description" content="Register for Squadlink to secure your spot in the arena. Join the ultimate esports platform to find your squad and compete globally.">
+  <meta property="twitter:image" content="https://squadlink.in/squadlink_logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Rajdhani:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: var(--bg);
+      position: relative;
+    }
+    
+    .register-container {
+      position: relative;
+      z-index: 10;
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      padding: 50px;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 50px rgba(0, 255, 255, 0.1);
+      margin: 40px 0;
+    }
+
+    .register-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .register-title {
+      font-family: 'Audiowide', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .register-sub {
+      color: var(--text-mute);
+      font-size: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-label {
+      display: block;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--cyan);
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(6, 10, 20, 0.6);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      outline: none;
+    }
+
+    .form-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      background: rgba(6, 10, 20, 0.8);
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 30px;
+      margin-top: 10px;
+    }
+
+    .radio-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      color: var(--text);
+    }
+
+    .radio-label input {
+      accent-color: var(--cyan);
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 1.1rem;
+      padding: 16px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--text-mute);
+      font-size: 0.9rem;
+      text-align: center;
+      width: 100%;
+      transition: color 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: var(--cyan);
+    }
+  </style>
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Orb Backgrounds -->
+  <div class="orb orb-cyan" style="width: 500px; height: 500px; top: -10%; left: -10%; animation: orbDrift 10s ease-in-out infinite;"></div>
+  <div class="orb orb-orange" style="width: 400px; height: 400px; bottom: -10%; right: -10%; animation: orbDrift 13s ease-in-out infinite reverse;"></div>
+
+  <div class="register-container scroll-reveal revealed" style="opacity: 1; transform: translateY(0);">
+    <div class="register-header">
+      <h1 class="register-title">Join The Arena</h1>
+      <p class="register-sub">Enter your details to secure your spot in the arena.</p>
+    </div>
+
+    <form action="#" method="POST" id="registerForm">
+      <div class="form-group">
+        <label class="form-label" for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. John Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="age">Age</label>
+        <input type="number" id="age" name="age" class="form-input" placeholder="Your Age" min="13" max="99" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="gameName">Primary Game</label>
+        <input type="text" id="gameName" name="gameName" class="form-input" placeholder="e.g. BGMI, Valorant, Free Fire" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="additionalGame1">Additional Game 1 (Optional)</label>
+        <input type="text" id="additionalGame1" name="additionalGame1" class="form-input" placeholder="e.g. Call of Duty Mobile">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="additionalGame2">Additional Game 2 (Optional)</label>
+        <input type="text" id="additionalGame2" name="additionalGame2" class="form-input" placeholder="e.g. CS:GO, Apex Legends">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Platform Preference</label>
+        <div class="radio-group">
+          <label class="radio-label">
+            <input type="radio" name="platform" value="mobile" required checked>
+            Mobile Game
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="platform" value="pc">
+            PC Game
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="inGameId">In-Game ID / IGN (Optional)</label>
+        <input type="text" id="inGameId" name="inGameId" class="form-input" placeholder="e.g. Player#1234">
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-submit">
+        <span class="btn-glow"></span>
+        Confirm Registration
+      </button>
+
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </form>
+  </div>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
